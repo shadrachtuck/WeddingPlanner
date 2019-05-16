@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wedding</title>
+</head>
+<body>
+  @model Wedding
+  <div>
+    <h1>@Model.WedderOne and @Model.WedderTwo </h1><a href="/Dashboard">Dashboard</a> | <a href="/Logout">Logout</a>
+    <h3>Date: @Model.Date.ToString("MMM dd, yyyy")</h3>
+    <h3>Guests</h3>
+    @foreach(var guest in ViewBag.AllGuests.GuestList)
+    {
+      <p>@guest.User.FirstName @guest.User.LastName</p>
+    }
+  </div>
+</body>
+</html>

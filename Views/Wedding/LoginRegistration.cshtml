@@ -1,0 +1,48 @@
+﻿<h1>Register</h1>
+
+@model User
+<form action="/Register" method="post">
+    <div class="form-group">
+    <div class="form-group">
+        <span asp-validation-for="FirstName"></span>
+        <label asp-for="FirstName">First Name</label>
+        <input class="form-control" type="text" asp-for="FirstName">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="LastName"></span>
+        <label asp-for="LastName">Last Name</label>
+        <input class="form-control" type="text" asp-for="LastName">
+    </div>
+        <span asp-validation-for="Email"></span>
+        <label asp-for="Email">Email</label>
+        <input class="form-control" type="text" asp-for="Email">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="Password"></span>
+        <label asp-for="Password">Password</label>
+        <input class="form-control" type="text" asp-for="Password">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="Confirm"></span>
+        <label asp-for="Confirm">Confirm Password</label>
+        <input class="form-control" type="text" asp-for="Confirm">
+    </div>
+    <input class="btn btn-primary" type="submit" value="Sign Up">
+</form>  
+
+<h1>Login</h1>
+
+<form action="/Login" method="post">
+    <div class="form-group">
+  
+        <span asp-validation-for="Email"></span>
+        <label for="Email">Email</label>
+        <input class="form-control" name="Email">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="Password"></span>
+        <label for="Password">Password</label>
+        <input type="text" class="form-control" name="Password">
+    </div>
+    <input class="btn btn-primary" type="submit" value="Login">
+</form>  

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wedding Plan</title>
+</head>
+<body>
+  @model Wedding
+  <div>
+    <h1>Plan your wedding...</h1><a href="/Dashboard">Dashboard</a> | <a href="/Logout">Logout</a>
+    <form class="form-group" action="/PlanWedding" method="POST">
+      <p>Wedder One <input class="form-control" type="text" asp-for="WedderOne"></p>
+      <p>Wedder Two <input class="form-control" type="text" asp-for="WedderTwo"></p>
+      <p>Wedding Date <input class="form-control" type="date" asp-for="Date"></p>
+      <p>Address <input class="form-control" type="text" asp-for="Address"></p>
+      <input class="form-control" type="hidden" value="">
+      <input class="btn btn-primary" type="submit" value="Create">
+    </form>
+  </div>
+</body>
+</html>
